@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: 0%;
+        }
+        .header{
+            padding: 1px;
+            text-align: left;
+            background: black;
+            color: white;
+            font-size: 5px;
+        }
+        .input{
+            border-radius: 10px;
+        }
+
+    </style>
+    <script>
+        function validationform(){
+            var x=document.forms["myform"] ["fname"].value;
+            if(x==""|| x==null)
+            {
+                alert("name must be filled out");
+                return false;
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="header">
+        <h2>MyChatApp by</h2>
+    </div><br>
+    <div >
+        <form name="myform" action="/action_page.php" onsubmit="return validationform()"  method="post" required>
+            <input type="text" class="input"  name="fname " placeholder="lets chat here...">
+            <input type="submit" value ="send"><br>
+            <input type="text" name="hello " id="search-str" value="hi" style="text-align: left;"/><br>
+            <input type="text" name="hello " id="search-str" value="hello" style="text-align: right;"/><br>
+            <input type="text" name="hello " id="search-str" value="whatsapp" style="text-align: left;"/><br>
+            <input type="text" name="hello " id="search-str" value=" all good" style="text-align: right;"/><br>
+            <input type="text" name="hello " id="search-str" value="all the best" style="text-align: left;"/><br>
+        </form>
+    </div>
+</body>
+</html>
